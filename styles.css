@@ -1,0 +1,98 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5em;
+}
+
+a:visited,
+a:hover {
+  font-style: italic;
+  font-weight: 500;
+}
+
+svg {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 15vh;
+  padding: 2em;
+  background-color: coral;
+}
+
+.logo-box {
+  font-weight: 500;
+}
+
+.navbar {
+  width: 70%;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 43.75em) {
+  .menu-svg {
+    display: block;
+  }
+
+  .navbar {
+    overflow: hidden;
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 15vh;
+    left: -100%;
+
+    text-align: center;
+    font-size: inherit;
+
+    background-color: coral;
+    transition: left 1s cubic-bezier(0.33, 1, 0.68, 1);
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    margin-top: 1em;
+
+    padding: 0.5em;
+  }
+
+  .show-nav {
+    left: 0;
+  }
+
+  .show-svg {
+    display: block;
+  }
+}
